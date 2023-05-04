@@ -1,0 +1,19 @@
+#SpringBoot Configuração
+spring:
+ datasource:
+  url: jdbc:postgresql://${DATABASE_HOST}:5432/${DATABASE}?useTimezone=True&serverTimezone=UTC&useLegacyDate
+  username: ${DATABASE_USER}
+  password: ${DATABASE_PASSWORD}
+##Propriedades JPA
+ jpa:
+  show-sql: true
+  hibernate:
+   ddl-auto: update
+  properties:
+   hibernate.format_sql: true
+   
+logging:
+ level:
+  org:
+   hibernate:
+    type: trace
